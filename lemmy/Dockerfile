@@ -21,4 +21,4 @@ RUN adduser -h /app -s sh -S -u 1000 lemmy
 RUN chown -R lemmy /app
 USER lemmy
 
-CMD ["/app/lemmy"]
+CMD ["/app/lemmy_server"]
