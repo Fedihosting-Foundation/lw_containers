@@ -20,6 +20,6 @@ jobs:
       - name: Docker Buildx Bake
         uses: docker/bake-action@v3.1.0
         with:
-          targets: [${{ matrix.image }}]
-          set: ["platform=linux/${{ matrix.arch }}"]
+          targets: ${{ matrix.image }}
+          set: "*.platform=linux/${{ matrix.arch }}"
           push: true
