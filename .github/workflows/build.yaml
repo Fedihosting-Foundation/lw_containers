@@ -9,6 +9,7 @@ jobs:
   bake:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         arch: [arm64, amd64]
         image: [lemmy-ui, lemmy]
