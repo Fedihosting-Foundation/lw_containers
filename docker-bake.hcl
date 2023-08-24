@@ -1,5 +1,5 @@
 variable "REGISTRY" {
-  default = "gcr.io/lemmyworld"
+  default = "ghcr.io/lemmyworld"
 }
 
 variable "LEMMY_VERSION" {
