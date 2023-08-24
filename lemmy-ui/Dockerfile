@@ -15,8 +15,8 @@ RUN git clone \
 
 COPY .yarnclean .yarnclean
 
-RUN yarn --production --prefer-offline --pure-lockfile
-RUN yarn --production --prefer-offline
+RUN yarn --production --prefer-offline --pure-lockfile --network-timeout 1000000
+RUN yarn --production --prefer-offline --network-timeout 1000000
 RUN NODE_OPTIONS="--max-old-space-size=8192" yarn build:prod
 
 RUN yarn autoclean --force
