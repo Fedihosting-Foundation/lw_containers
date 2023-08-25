@@ -10,6 +10,8 @@ RUN cargo install \
 
 FROM debian:bullseye-slim
 
+LABEL org.opencontainers.image.description Image for the lemmy_server.
+
 RUN apt-get update && \
     apt-get install -y libpq5 ca-certificates && \
     rm -rf /var/lib/apt/lists/*
