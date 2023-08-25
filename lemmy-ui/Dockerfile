@@ -26,6 +26,8 @@ RUN rm -rf ./node_modules/npm
 
 FROM node:bullseye-slim
 
+LABEL org.opencontainers.image.description Image for the nodejs Lemmy UI.
+
 ENV NODE_ENV=production
 
 COPY --from=builder /app/dist /app/dist
