@@ -18,7 +18,7 @@ RUN apt-get update && \
 
 COPY --from=builder /usr/local/cargo/bin/lemmy_server /app/lemmy_server
 RUN adduser -h /app -s sh -S -u 1000 lemmy
-RUN chown -R lemmy /app
+RUN chown -R lemmy:lemmy /app
 USER lemmy
 
 CMD ["/app/lemmy_server"]
