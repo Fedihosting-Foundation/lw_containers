@@ -7,6 +7,7 @@ RUN cargo install \
     --git https://github.com/LemmyNet/lemmy.git \
     --tag "${LEMMY_VERSION}" \
     --features "prometheus-metrics" \
+    --locked \
     lemmy_server
 
 FROM debian:bullseye-slim
