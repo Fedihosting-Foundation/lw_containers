@@ -26,6 +26,7 @@ jobs:
       - name: Docker Buildx Bake
         uses: docker/bake-action@v3.1.0
         with:
+          provenance: false
           targets: ${{ matrix.image }}
           set: "*.platform=linux/amd64"
           push: true
@@ -49,6 +50,7 @@ jobs:
       - name: Docker Buildx Bake
         uses: docker/bake-action@v3.1.0
         with:
+          provenance: false
           targets: ${{ matrix.image }}
           set: "*.platform=linux/arm64"
           push: true
